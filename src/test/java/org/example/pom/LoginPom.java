@@ -33,5 +33,9 @@ public class LoginPom extends BasicPom {
         password.sendKeys(setPasswordParam);
     }
 
+    public void clickLogin() {
+        login.click();
+    }
+
 
 }
