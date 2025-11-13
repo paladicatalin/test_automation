@@ -9,8 +9,8 @@ public class Basic {
 
     @BeforeClass
     public void beferoTest() {
-        driver = Driver.getAutoLocalDriver();
-        //driver = Driver.getRemoteDriver();
+        //driver = Driver.getAutoLocalDriver();
+        driver = Driver.getRemoteDriver();
         driver.manage().window().maximize();
     }
     @AfterClass
