@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TESTY"
+           tests="3"
+           failures="1"
+           errors="0"
+           skipped="2"
+           time="0.320">
+    <properties></properties>
+
+            <testcase
+                name="beferoTest"
+                time="0.320"
+                classname="org.example.test.FormTest">
+
+            <failure type="org.openqa.selenium.SessionNotCreatedException" message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: &apos;Sorins-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:10b4:5384:4a68:605c%en0&apos;
+Build info: version: &apos;4.36.0&apos;, revision: &apos;6d115cfd87&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.0.1&apos;, java.version: &apos;24.0.1&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: 128.0, goog:chromeOptions: {args: [], extensions: []}, selenoid:options: {enableLog: true, enableVNC: true, enableVideo: true, env: [TZ=UTC], headless: true, name: Test badge..., noSandbox: true, sessionTimeout: 15m}}]}]
+Capabilities {browserName: chrome, browserVersion: 128.0, goog:chromeOptions: {args: [], extensions: []}, selenoid:options: {enableLog: true, enableVNC: true, enableVideo: true, env: [TZ=UTC], headless: true, name: Test badge..., noSandbox: true, sessionTimeout: 15m}}">
+                <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'Sorins-MacBook-Air.local', ip: 'fe80:0:0:0:10b4:5384:4a68:605c%en0'
+Build info: version: '4.36.0', revision: '6d115cfd87'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.0.1', java.version: '24.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: 128.0, goog:chromeOptions: {args: [], extensions: []}, selenoid:options: {enableLog: true, enableVNC: true, enableVideo: true, env: [TZ=UTC], headless: true, name: Test badge..., noSandbox: true, sessionTimeout: 15m}}]}]
+Capabilities {browserName: chrome, browserVersion: 128.0, goog:chromeOptions: {args: [], extensions: []}, selenoid:options: {enableLog: true, enableVNC: true, enableVideo: true, env: [TZ=UTC], headless: true, name: Test badge..., noSandbox: true, sessionTimeout: 15m}}
+                org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:575)org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:174)org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:152)org.example.utils.Driver.getRemoteDriver(Driver.java:52)org.example.test.FormTest.beferoTest(FormTest.java:30)java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)java.base/java.lang.reflect.Method.invoke(Method.java:565)org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)java.base/java.util.ArrayList.forEach(ArrayList.java:1604)org.testng.TestRunner.privateRun(TestRunner.java:741)org.testng.TestRunner.run(TestRunner.java:616)org.testng.SuiteRunner.runTest(SuiteRunner.java:421)org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)org.testng.SuiteRunner.run(SuiteRunner.java:312)org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)org.testng.TestNG.runSuitesLocally(TestNG.java:1208)org.testng.TestNG.runSuites(TestNG.java:1112)org.testng.TestNG.run(TestNG.java:1079)com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+                    Caused by: java.io.UncheckedIOException: java.net.ConnectException
+                    org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$2(JdkHttpClient.java:387)java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:328)java.base/java.util.concurrent.FutureTask.run(FutureTask.java)java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)java.base/java.lang.Thread.run(Thread.java:1447)
+                                    Caused by: java.net.ConnectException
+                    java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:923)java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:459)org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$2(JdkHttpClient.java:387)java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:328)java.base/java.util.concurrent.FutureTask.run(FutureTask.java)java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)java.base/java.lang.Thread.run(Thread.java:1447)
+                                    Caused by: java.net.ConnectException
+                    java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1046)java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:215)java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:268)java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:226)java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:980)java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:957)java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:556)java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run$$$capture(CompletableFuture.java:1819)java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java)java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)java.base/java.lang.Thread.run(Thread.java:1447)
+                                    Caused by: java.nio.channels.ClosedChannelException
+                    java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:942)java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:203)java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:268)java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:226)java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:980)java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:957)java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:556)java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run$$$capture(CompletableFuture.java:1819)java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java)java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)java.base/java.lang.Thread.run(Thread.java:1447)
+                ]]>
+            </failure>
+    </testcase>
+
+            <testcase
+                name="afterTest"
+                time="0.0"
+                classname="org.example.test.FormTest">
+            </testcase>
+            <testcase
+                name="formTest"
+                time="0.0"
+                classname="org.example.test.FormTest">
+            </testcase>
+
+</testsuite>
