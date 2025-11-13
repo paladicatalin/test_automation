@@ -37,17 +37,22 @@ public class FormTest extends Basic {
 
         FormPom form = new FormPom(driver);
         form.closeAdvert();
+        System.out.println("set FirstName");
         form.setFirstName(FIRST_NAME);
         form.setLastName(LAST_NAME);
         form.scroLlToSubject();
         form.setUserEmail(EMAIL);
+        System.out.println("set Gender");
         form.setGender(GENDER);
         form.setUserNumber(USER_NUMBER);
         form.setDateOfBirthInput(DATE_OF_BIRTH);
         form.setSubjectsInput(SUBJECT);
+
         form.scroLlToSubject();
         form.setHobbies(HOBBY);
+        System.out.println("set State");
         form.setstate(STATE);
+        System.out.println("set City");
         form.setcity(CITY);
         form.clickSubmit();
         Thread.sleep(5000);

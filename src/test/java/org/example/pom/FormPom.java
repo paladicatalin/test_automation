@@ -67,11 +67,7 @@ public class FormPom extends BasicPom {
     public void setDateOfBirthInput(String date) throws InterruptedException {
         dateOfBirthInput.click();
         Thread.sleep(1000);
-
-        // scoate virgulă, adaugă spațiu dacă lipsește înainte de an
         date = date.replace(",", " ").replaceAll("\\s+", " ").trim();
-
-        // regex universal pentru: 13 November 2025 | 13 November2025 | 13 November,2025
         Pattern pattern = Pattern.compile("(\\d{1,2})\\s+([A-Za-z]+)\\s*(\\d{4})");
         Matcher matcher = pattern.matcher(date);
 
