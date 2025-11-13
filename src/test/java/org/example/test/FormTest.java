@@ -22,12 +22,12 @@ public class FormTest {
     public static String HOBBY = "Music";
     public static String STATE = "Rajasthan";
     public static String CITY = "Jaipur";
-    public static String DATE_OF_BIRTH = "16 October,2025";
+    public static String DATE_OF_BIRTH = "13 November,2025";
 
     @BeforeClass
     public void beferoTest() {
-        // driver = Driver.getAutoLocalDriver();
-        driver = Driver.getRemoteDriver();
+        driver = Driver.getAutoLocalDriver();
+        //driver = Driver.getRemoteDriver();
         driver.manage().window().maximize();
     }
 

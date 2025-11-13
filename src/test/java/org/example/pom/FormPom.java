@@ -4,6 +4,9 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class FormPom {
 
     public WebDriver driver;
@@ -63,10 +66,28 @@ public class FormPom {
         el.sendKeys(" ");
     }
 
-    public void setDateOfBirthInput(String dateOfBirthParam) {
-        dateOfBirthInput.sendKeys(Keys.COMMAND, "a");
-        dateOfBirthInput.sendKeys(dateOfBirthParam);
-        dateOfBirthInput.sendKeys(Keys.ENTER);
+    public void setDateOfBirthInput(String date) throws InterruptedException {
+        dateOfBirthInput.click();
+        Thread.sleep(1000);
+
+        // scoate virgulă, adaugă spațiu dacă lipsește înainte de an
+        date = date.replace(",", " ").replaceAll("\\s+", " ").trim();
+
+        // regex universal pentru: 13 November 2025 | 13 November2025 | 13 November,2025
+        Pattern pattern = Pattern.compile("(\\d{1,2})\\s+([A-Za-z]+)\\s*(\\d{4})");
+        Matcher matcher = pattern.matcher(date);
+
+        if (!matcher.find()) {
+            throw new RuntimeException("Date format invalid: " + date);
+        }
+
+        String day = matcher.group(1);
+        String month = matcher.group(2);
+        String year = matcher.group(3);
+
+        driver.findElement(By.className("react-datepicker__year-select")).sendKeys(year);
+        driver.findElement(By.className("react-datepicker__month-select")).sendKeys(month);
+        driver.findElement(By.xpath("//div[contains(@class,'day') and text()='" + day + "']")).click();
     }
 
     public void setSubjectsInput(String subjectsInputParam) {
