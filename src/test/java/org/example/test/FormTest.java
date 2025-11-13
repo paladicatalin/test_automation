@@ -9,7 +9,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class FormTest {
+public class FormTest extends Basic {
 
     public WebDriver driver;
     public static String URL = "https://demoqa.com/automation-practice-form";
@@ -26,8 +26,8 @@ public class FormTest {
 
     @BeforeClass
     public void beferoTest() {
-        //driver = Driver.getAutoLocalDriver();
-        driver = Driver.getRemoteDriver();
+        driver = Driver.getAutoLocalDriver();
+        //driver = Driver.getRemoteDriver();
         driver.manage().window().maximize();
     }
 

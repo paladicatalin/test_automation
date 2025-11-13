@@ -7,10 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class FormPom {
+public class FormPom extends BasicPom {
 
-    public WebDriver driver;
-    public JavascriptExecutor js;
 
     @FindBy(xpath = "//*[@id='firstName']")
     WebElement firstName;
@@ -121,16 +119,6 @@ public class FormPom {
         firstName.sendKeys(firstNameParam);
     }
 
-    public void closeAdvert() {
-        try {
-            js.executeScript("var elem = document.evaluate(\"//*[@id='adplus-anchor']\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;" +
-                    "elem.parentNode.removeChild(elem);");
-        } catch (Exception ignored) {}
-        try {
-            js.executeScript("var elem = document.evaluate(\"//footer\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;" +
-                    "elem.parentNode.removeChild(elem);");
-        } catch (Exception ignored) {}
-    }
 
     public void scroLlToSubject() {
         scrollToElement(subjectsInput);
